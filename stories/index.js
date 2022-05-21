@@ -3,7 +3,7 @@ import React from "react";
 import DayListItem from "components/DayListItem";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import DayListfrom  from "components/DayList";
+import DayList  from "components/DayList";
 
 import "index.scss";
 
