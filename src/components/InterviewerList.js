@@ -10,7 +10,8 @@ export default function InterviewerList ({interviewers, interviewer, setIntervie
         name={name}
         avatar={avatar} 
         selected={interviewer === id}
-        setInterviewer={setInterviewer}
+        setInterviewer={() => setInterviewer(id)}
+
       />
   ))
   return (
