@@ -9,6 +9,7 @@ import DayList  from "components/DayList";
 import Appointment from "components/Appointment/index";
 import Header from "components/Appointment/Header";
 import Empty from "components/Appointment/Empty";
+import Show from "components/Appointment/Show"
 
 
 import "index.scss";
@@ -146,3 +147,9 @@ storiesOf("Appointment", module)
 .add("Appointment with Time", () => <Appointment time="12pm" />)
 .add("Header", () => <Header time="12pm" />)
 .add("Empty", () => <Empty onAdd={action("onAdd")}/>)
+.add("Show", () => <Show 
+                    student="Lydia Miller-Jones" 
+                    interviewer={interviewers[0]} 
+                    onEdit={action("onEdit")}
+                    onDelete={action("onDelete")}
+                    />)
