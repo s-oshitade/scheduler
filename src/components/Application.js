@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "components/Application.scss";
 import DayList from "./DayList"
 import InterviewerList from "./InterviewerList";
@@ -44,24 +44,6 @@ const appointments = {
   }
 };
 
-const days = [
-  {
-    id: 1,
-    name: "Monday",
-    spots: 2,
-  },
-  {
-    id: 2,
-    name: "Tuesday",
-    spots: 5,
-  },
-  {
-    id: 3,
-    name: "Wednesday",
-    spots: 0,
-  },
-];
-
 const interviewers = [
   { id: 1, name: "Sylvia Palmer", avatar: "https://i.imgur.com/LpaY82x.png" },
   { id: 2, name: "Tori Malcolm", avatar: "https://i.imgur.com/Nmx0Qxo.png" },
@@ -72,6 +54,7 @@ const interviewers = [
 
 export default function Application(props) {
 const [day, setDay] = useState("Monday");
+const [days, setDays] = useState([]);
 const [currentInterviewerID, setCurrentInterviewerID] = useState(null);
 
 const appointmentsArray = Object.values(appointments).map(appointment => {
@@ -79,6 +62,14 @@ const appointmentsArray = Object.values(appointments).map(appointment => {
     <Appointment key={appointment.id}  {...appointment} />
   )
 })
+
+useEffect(() => {
+  const URL = "/api/days"
+  axios.get(URL).then(response => {
+    setDays([...response.data.days]);
+    console.log("data", response.data);
+ });
+}, []);
 
   return (
     <main className="layout">
