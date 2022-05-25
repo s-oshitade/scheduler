@@ -66,8 +66,8 @@ const appointmentsArray = Object.values(appointments).map(appointment => {
 useEffect(() => {
   const URL = "/api/days"
   axios.get(URL).then(response => {
-    setDays([...response.data.days]);
     console.log("data", response.data);
+    setDays([...response.data]);
  });
 }, []);
 
