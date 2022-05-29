@@ -28,6 +28,7 @@ export default function Appointment(props) {
         <Form
           //Note: To be deleted: Set the interviewers prop to an empty array. We will implement this properly in a future activity.
           interviewers={[]}
+          onCancel={() => back()}
         />
       )}
     </article>
