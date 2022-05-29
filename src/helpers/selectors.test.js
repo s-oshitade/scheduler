@@ -10,11 +10,13 @@ const state = {
       id: 1,
       name: "Monday",
       appointments: [1, 2, 3],
+      interviewers: [1, 3],
     },
     {
       id: 2,
       name: "Tuesday",
       appointments: [4, 5],
+      interviewers: [2, 4, 5],
     },
   ],
   appointments: {
@@ -43,9 +45,25 @@ const state = {
       name: "Tori Malcolm",
       avatar: "https://i.imgur.com/Nmx0Qxo.png",
     },
+    3: {
+      id: 3,
+      name: "Mildred Nazir",
+      avatar: "https://i.imgur.com/T2WwVfS.png",
+    },
+    4: {
+      id: 4,
+      name: "Cohana Roy",
+      avatar: "https://i.imgur.com/FK8V841.jpg",
+    },
+    5: {
+      id: 5,
+      name: "Sven Jones",
+      avatar: "https://i.imgur.com/twYrpay.jpg",
+    },
   },
 };
 
+//unit tests for getInterviewers
 test("getAppointmentsForDay returns an array", () => {
   const result = getAppointmentsForDay(state, "Monday");
   expect(Array.isArray(result)).toBe(true);
@@ -72,6 +90,7 @@ test("getAppointmentsForDay returns an empty array when the day is not found", (
   expect(result.length).toEqual(0);
 });
 
+//unit tests for getInterviewers
 test("getInterview returns an object with the interviewer data", () => {
   const result = getInterview(state, state.appointments["3"].interview);
   expect(result).toEqual(
