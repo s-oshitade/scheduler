@@ -31,12 +31,13 @@ export default function Application(props) {
       [id]: appointment,
     };
     //Update the bookInterview function to call setState with new state object
-    setState({
-      ...state,
-      appointments,
+
+    return axios.put(`/api/appointments/${id}`, { interview }).then(() => {
+      setState({
+        ...state,
+        appointments,
+      });
     });
-    // axios.put("/api/appointments/:id").then();
-    console.log(id, interview);
   }
 
   const appointments = getAppointmentsForDay(state, state.day);
