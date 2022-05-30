@@ -10,9 +10,11 @@ export default function Appointment(props) {
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE = "CREATE";
+
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
+
   function save(name, interviewer) {
     const interview = {
       student: name,
@@ -32,9 +34,10 @@ export default function Appointment(props) {
       )}
       {mode === CREATE && (
         <Form
-          //Note: To be deleted: Set the interviewers prop to an empty array. We will implement this properly in a future activity.
           interviewers={props.interviewers}
           onCancel={() => back()}
+          //pass the save function to the Form component
+          onSave={save}
         />
       )}
     </article>
