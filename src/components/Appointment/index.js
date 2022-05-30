@@ -4,12 +4,15 @@ import Header from "./Header";
 import Show from "./Show";
 import Empty from "./Empty";
 import Form from "./Form";
+import Status from "./Status";
 import useVisualMode from "hooks/useVisualMode";
 
 export default function Appointment(props) {
+  console.log("props", props);
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE = "CREATE";
+  const SAVING = "SAVING";
 
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
@@ -20,6 +23,10 @@ export default function Appointment(props) {
       student: name,
       interviewer,
     };
+    //call the props.bookInterview function with the appointment id and interview as arguments from within the save function
+    props.bookInterview(props.id, interview);
+    transition(SAVING);
+    transition(SHOW);
   }
   return (
     //conditionally render components
@@ -40,6 +47,7 @@ export default function Appointment(props) {
           onSave={save}
         />
       )}
+      {mode === SAVING && <Status message="Saving" />}
     </article>
   );
 }
