@@ -24,9 +24,10 @@ export default function Appointment(props) {
       interviewer,
     };
     //call the props.bookInterview function with the appointment id and interview as arguments from within the save function
-    props.bookInterview(props.id, interview);
     transition(SAVING);
-    transition(SHOW);
+    props.bookInterview(props.id, interview).then(() => {
+      transition(SHOW);
+    });
   }
   return (
     //conditionally render components
