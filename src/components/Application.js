@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "components/Application.scss";
 import DayList from "./DayList";
-import InterviewerList from "./InterviewerList";
 import Appointment from "./Appointment";
 import {
   getAppointmentsForDay,
@@ -30,8 +29,8 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment,
     };
-    //Update the bookInterview function to call setState with new state object
 
+    //Update the bookInterview function to call setState with new state object
     return axios.put(`/api/appointments/${id}`, { interview }).then(() => {
       setState({
         ...state,
