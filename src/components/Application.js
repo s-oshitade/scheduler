@@ -37,9 +37,7 @@ export default function Application(props) {
       });
     });
   }
-
   function cancelInterview(id) {
-    console.log("abc");
     const appointment = {
       ...state.appointments[id], 
       interview: null,
