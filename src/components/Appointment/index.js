@@ -37,7 +37,7 @@ export default function Appointment(props) {
       .then(() => {
         transition(SHOW);
       })
-      .catch(error => 
+      .catch(() => 
         transition(ERROR_SAVE, true)
       );
   }
@@ -46,15 +46,14 @@ export default function Appointment(props) {
     transition(CONFIRM);
   }
 
-  function handleDelete(id) {
-    console.log(id);
+  function handleDelete() {
     transition(DELETE);
     props
-      .cancelInterview(id)
+      .cancelInterview(props.id)
       .then(() => {
         transition(EMPTY);
       })
-      .catch(error => 
+      .catch(() => 
         transition(ERROR_DELETE, true)
       );
   }
@@ -102,9 +101,15 @@ export default function Appointment(props) {
         />
       )}
       {mode === ERROR_SAVE &&
-        <Error onClick={props.onClose} message="Could not edit appointment" />}
+        <Error  
+        message="Could not update appointment" 
+        onClose={back}
+        />}
       {mode === ERROR_DELETE &&
-        <Error onClick={props.onClose} message="Could not delete appointment" />}
+        <Error 
+        message="Could not delete appointment" 
+        onClose={back}
+        />}
     </article>
   );
 }
