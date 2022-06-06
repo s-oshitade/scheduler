@@ -4,7 +4,7 @@ import axios from "axios";
 export default function useApplicationData() {
   //Combine the states into a single object
   const [state, setState] = useState({
-    day: "Monday",
+    day: "Thursday",
     days: [],
     appointments: {},
     interviewers: {},
@@ -12,6 +12,21 @@ export default function useApplicationData() {
 
   const setDay = (day) => setState({ ...state, day });
 
+  function updateSpotsRemaining(newAppointments) {
+    return state.days.map((eachDayObj) => {
+      let emptySpots = 0;
+
+      for(const apptId of eachDayObj.appointments){
+        if(!newAppointments[apptId].interview){
+          emptySpots++;
+        }
+      }
+      
+     return { ...eachDayObj, spots: emptySpots }
+
+    })
+  }
+  
   function bookInterview(id, interview) {
     const appointment = {
       ...state.appointments[id], //spread existing keys.
@@ -21,11 +36,14 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment,
     };
+    const days = updateSpotsRemaining(appointments)
+    
     //Update the bookInterview function to call setState with new state object
     return axios.put(`/api/appointments/${id}`, { interview }).then(() => {
       setState({
         ...state,
         appointments,
+        days
       });
     });
   }
@@ -39,11 +57,12 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment,
     };
-    //Update the bookInterview function to call setState with new state object
+    const days = updateSpotsRemaining(appointments)
     return axios.delete(`/api/appointments/${id}`).then(() => {
       setState({
         ...state,
         appointments,
+        days
       });
     });
   }
@@ -54,9 +73,6 @@ export default function useApplicationData() {
       axios.get("/api/appointments"),
       axios.get("/api/interviewers"),
     ]).then((all) => {
-      console.log("all", all);
-      console.log(all[0].data);
-      console.log(all[1].data);
       setState((prev) => ({
         ...prev,
         days: all[0].data,
