@@ -15,6 +15,8 @@ describe("Form", () => {
     }
   ];
 
+  const { getByPlaceholderText } = render(<Form interviewers={interviewers}/>);
+
   it("renders without student name if not provided", () => {
     expect(getByPlaceholderText("Enter Student Name")).toHaveValue("");
   });
