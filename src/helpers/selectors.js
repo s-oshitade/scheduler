@@ -15,14 +15,16 @@ export function getInterview(state, interview) {
     return null;
   }
   const id = interview.interviewer;
-  return {
+  const interviewWithData = {
     student: interview.student,
     interviewer: {
       id: id,
       name: state.interviewers[id].name,
       avatar: state.interviewers[id].avatar,
-    },
-  };
+    }
+  }
+  return interviewWithData;
+  // console.log("interviewWithData",interviewWithData)
 }
 
 export function getInterviewersForDay(state, day) {

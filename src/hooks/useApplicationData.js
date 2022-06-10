@@ -4,13 +4,13 @@ import axios from "axios";
 export default function useApplicationData() {
   //Combine the states into a single object
   const [state, setState] = useState({
-    day: "Thursday",
+    day: "Monday",
     days: [],
     appointments: {},
     interviewers: {},
   });
 
-  const setDay = (day) => setState({ ...state, day });
+  const setDay = (day) => setState((previous) => ({ ...previous, day }));
 
   function updateSpotsRemaining(newAppointments) {
     return state.days.map((eachDayObj) => {
