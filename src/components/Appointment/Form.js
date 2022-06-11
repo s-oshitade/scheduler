@@ -24,12 +24,13 @@ export default function Form (props) {
       return;
     }
 
-    if (interviewer === null) {
-      setError("Please select an interviewer");
-      return;
-    }
+    //Why do we have a test that passes when 
+    // if (interviewer === null) {
+    //   setError("Please select an interviewer");
+    //   return;
+    // }
 
-    // setError("");
+    setError("");
   
     props.onSave(student, interviewer);
   }
