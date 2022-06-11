@@ -19,7 +19,6 @@ export default function DayListItem(props) {
 
 const handleClick = () => {
   props.setDay(props.name)
-  console.log("Clicking", props.name);
 }
 
   return (
