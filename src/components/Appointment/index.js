@@ -62,7 +62,7 @@ export default function Appointment(props) {
   }
   return (
     //conditionally render components
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && (
