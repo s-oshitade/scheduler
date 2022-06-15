@@ -39,6 +39,9 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 ### Create New Booking
 ![](https://github.com/s-oshitade/scheduler/blob/master/public/features/create-new-booking.png?raw=true)
 
+### Confirm Delete
+![]()
+
 <hr>
 
 ## Getting Started
