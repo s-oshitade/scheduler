@@ -1,5 +1,18 @@
 # Interview Scheduler
 
+## About 
+Interview Scheduler is a single-page application (SPA) that allows users to book technical interviews between students and mentors. The front end of this project is built with React and makes requests to an API to fetch and store appointment data from a database. Each appointment has one student and one interviewer. When creating a new appointment, the user can enter any student name while the interviewer is chosen from a predefined list. The user can save the appointment and view the entire schedule of appointments on any day of the week. Appointments can also be edited or deleted. 
+
+## Features
+* Users can book new appointments and view exisitng ones
+* Users can edit and cancel appointments
+* Users are shown a status indicator while asynchronous operations are in progress.
+* Users is presented with a confirmation when they attempt to cancel an interview.
+* The application makes API requests to load and persist data.
+
+## Minimum Viable Product
+![](https://github.com/s-oshitade/scheduler/blob/master/public/features/mvp.gif?raw=true)
+
 ## Setup
 
 Install dependencies with `npm install`.
@@ -21,3 +34,22 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Dependencies
+    axios
+    classnames
+    normalize.css
+    react
+    react-dom
+    react-scripts
+
+## Dev - Dependencies
+    storybook/addons
+    storybook/react
+    testing-library/jest-dom
+    testing-library/react
+    testing-library/react-hooks
+    babel-loader
+    node-sass
+    prop-types
+    react-test-renderer
