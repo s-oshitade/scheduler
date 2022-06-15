@@ -3,7 +3,7 @@
 ## About 
 This project was completed by [me](https://www.linkedin.com/in/seun-oshitade-53001120b/) as part of my learnings at [Lighthouse Labs](https://www.lighthouselabs.ca/en). 
 
-Interview Scheduler is a single-page application (SPA) that allows users to book technical interviews between students and mentors. The front end of this project is built with React and makes requests to an API to fetch and store appointment data from a database. This application was tested with Jest, Testing-library and Cypress.
+Interview Scheduler is a single-page application (SPA) that allows users to book interviews between students and mentors. The front end is built with React and makes `axios` requests to an API to load and persist data. This application was tested with `Jest`, `Testing-library` and `Cypress`.
 
 <hr>
 
