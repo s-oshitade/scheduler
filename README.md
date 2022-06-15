@@ -11,7 +11,7 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 * The application makes API requests to load and persist data.
 
 ## Minimum Viable Product
-![](https://github.com/s-oshitade/scheduler/blob/master/public/features/mvp.gif?raw=true)
+<img src="https://github.com/s-oshitade/scheduler/blob/master/public/features/mvp.gif?raw=true">
 
 ## Setup
 
