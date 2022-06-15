@@ -12,22 +12,24 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 
 ## Minimum Viable Product
 ### Overview
-<img src="https://github.com/s-oshitade/scheduler/blob/master/public/features/mvp.gif?raw=true" width="100%">
+<p align="center">
+<img src="https://github.com/s-oshitade/scheduler/blob/master/public/features/mvp.gif?raw=true" width="80%">
+</ p>
 
 ### View DayListItem
 ![](https://github.com/s-oshitade/scheduler/blob/master/public/features/view-daylist-items.png?raw=true)
 
 ### Select DayListItem
-![]()
+![](https://github.com/s-oshitade/scheduler/blob/master/public/features/select-daylistitem.png?raw=true)
 
 ### Controlled Component
-![]()
+![](https://github.com/s-oshitade/scheduler/blob/master/public/features/controlled-component.png?raw=true)
 
 ### Input Validation
-![]()
+![](https://github.com/s-oshitade/scheduler/blob/master/public/features/input-validation.png?raw=true)
 
 ### Create New Booking
-![]()
+![](https://github.com/s-oshitade/scheduler/blob/master/public/features/create-new-booking.png?raw=true)
 
 ## Setup
 
