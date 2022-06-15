@@ -1,7 +1,11 @@
-# Interview Scheduler
+# Scheduler
 
 ## About 
-Interview Scheduler is a single-page application (SPA) that allows users to book technical interviews between students and mentors. The front end of this project is built with React and makes requests to an API to fetch and store appointment data from a database. Each appointment has one student and one interviewer. When creating a new appointment, the user can enter any student name while the interviewer is chosen from a predefined list. The user can save the appointment and view the entire schedule of appointments on any day of the week. Appointments can also be edited or deleted. 
+This project was completed by [me](https://www.linkedin.com/in/seun-oshitade-53001120b/) as part of my learnings at [Lighthouse Labs](https://www.lighthouselabs.ca/en). 
+
+Interview Scheduler is a single-page application (SPA) that allows users to book technical interviews between students and mentors. The front end of this project is built with React and makes requests to an API to fetch and store appointment data from a database. This application was tested with Jest, Testing-library and Cypress.
+
+<hr>
 
 ## Features
 * Users can book new appointments and view exisitng ones
@@ -10,11 +14,15 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 * Users is presented with a confirmation when they attempt to cancel an interview.
 * The application makes API requests to load and persist data.
 
+<hr>
+
 ## Minimum Viable Product
+
 ### Overview
-<p align="center">
+
 <img src="https://github.com/s-oshitade/scheduler/blob/master/public/features/mvp.gif?raw=true" width="80%">
-</ p>
+
+<hr>
 
 ### View DayListItem
 ![](https://github.com/s-oshitade/scheduler/blob/master/public/features/view-daylist-items.png?raw=true)
@@ -31,27 +39,16 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 ### Create New Booking
 ![](https://github.com/s-oshitade/scheduler/blob/master/public/features/create-new-booking.png?raw=true)
 
-## Setup
+<hr>
 
-Install dependencies with `npm install`.
+## Getting Started
 
-## Running Webpack Development Server
+* Clone the [server API](https://github.com/s-oshitade/scheduler-api) and follow the ReadMe to run the server
 
-```sh
-npm start
-```
+* Clone [scheduler repo](https://github.com/s-oshitade/scheduler) and Install dependencies with `npm install`.
 
-## Running Jest Test Framework
+* Run the Webpack Development Server with `npm start` 
 
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
 
 ## Dependencies
     axios
@@ -71,3 +68,13 @@ npm run storybook
     node-sass
     prop-types
     react-test-renderer
+
+## Testing
+This project was tested with Jest, Testing-library and Cypress.
+
+## Continuous Improvement
+* Implement reducer and web socket
+* Host app on Heroku
+
+## License 
+This project is available under the ISC license.
