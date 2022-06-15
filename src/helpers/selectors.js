@@ -24,7 +24,6 @@ export function getInterview(state, interview) {
     }
   }
   return interviewWithData;
-  // console.log("interviewWithData",interviewWithData)
 }
 
 export function getInterviewersForDay(state, day) {
