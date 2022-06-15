@@ -69,8 +69,6 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
     prop-types
     react-test-renderer
 
-## Testing
-This project was tested with Jest, Testing-library and Cypress.
 
 ## Continuous Improvement
 * Implement reducer and web socket
