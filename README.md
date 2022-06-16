@@ -7,12 +7,12 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 
 <hr>
 
-## Features
+## Selected Features
 * Users can book new appointments and view exisitng ones
 * Users can edit and cancel appointments
 * Users are shown a status indicator while asynchronous operations are in progress.
-* Users is presented with a confirmation when they attempt to cancel an interview.
-* The application makes API requests to load and persist data.
+* Users receive confirmation prompt when they attempt to cancel/delete an interview.
+
 
 <hr>
 
