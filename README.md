@@ -20,27 +20,27 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 
 ### Overview
 
-<img src="https://github.com/s-oshitade/scheduler/blob/master/public/features/mvp.gif?raw=true" width="80%">
+<img src="https://github.com/s-oshitade/scheduler/blob/master/docs/mvp.gif?raw=true" width="80%">
 
 <hr>
 
 ### View DayListItem
-![](https://github.com/s-oshitade/scheduler/blob/master/public/features/view-daylist-items.png?raw=true)
+![](https://github.com/s-oshitade/scheduler/blob/master/docs/view-daylist-items.png?raw=true)
 
 ### Select DayListItem
-![](https://github.com/s-oshitade/scheduler/blob/master/public/features/select-daylistitem.png?raw=true)
+![](https://github.com/s-oshitade/scheduler/blob/master/docs/select-daylistitem.png?raw=true)
 
 ### Controlled Component
-![](https://github.com/s-oshitade/scheduler/blob/master/public/features/controlled-component.png?raw=true)
+![](https://github.com/s-oshitade/scheduler/blob/master/docs/controlled-component.png?raw=true)
 
 ### Input Validation
-![](https://github.com/s-oshitade/scheduler/blob/master/public/features/input-validation.png?raw=true)
+![](https://github.com/s-oshitade/scheduler/blob/master/docs/input-validation.png?raw=true)
 
 ### Create New Booking
-![](https://github.com/s-oshitade/scheduler/blob/master/public/features/create-new-booking.png?raw=true)
+![](https://github.com/s-oshitade/scheduler/blob/master/docs/create-new-booking.png?raw=true)
 
 ### Confirm Delete
-![]()
+![](https://github.com/s-oshitade/scheduler/blob/master/docs/confirm-delete.png?raw=true)
 
 <hr>
 
